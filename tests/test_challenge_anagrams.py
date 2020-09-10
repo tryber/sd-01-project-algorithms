@@ -1,10 +1,31 @@
-# from challenges.challenge_anagrams import is_anagram
+from challenges.challenge_anagrams import is_anagram
 
 
-# start_time = [2, 1, 2, 1, 4, 4]
-# end_time   = [2, 2, 3, 5, 5, 5]
+class Test_Anagrams:
+    def test_when_the_anagram_receives_amor_and_roma_it_must_be_True(self):
+        first_string = "amor"
+        second_string = "roma"
+        given = is_anagram(first_string, second_string)
+        expected = True
+        assert given is expected
 
-# def when_target_time_is_5_the_output_must_be_3():
-#     expectation = study_schedule(start_time, end_time, target_time)
-#     reality = 3
-#     assert expectation == reality
+    def test_when_the_anagram_receives_pedra_and_perda_it_must_be_True(self):
+        first_string = "pedra"
+        second_string = "perda"
+        given = is_anagram(first_string, second_string)
+        expected = True
+        assert given is expected
+
+    def test_when_the_anagram_receives_pato_and_tapo_it_must_be_True(self):
+        first_string = "pato"
+        second_string = "tapo"
+        given = is_anagram(first_string, second_string)
+        expected = True
+        assert given is expected
+
+    def test_when_the_anagram_receives_coxinha_and_romaempada_it_must_be_False(self):
+        first_string = "coxinha"
+        second_string = "empada"
+        given = is_anagram(first_string, second_string)
+        expected = False
+        assert given is expected
