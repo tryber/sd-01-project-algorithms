@@ -1,4 +1,4 @@
-def is_palindrome_recursive(word, index=0):
+def is_palindrome_recursive(word: str, index: int = 0) -> bool:
     if len(word) == 0:
         return False
     if index == len(word) // 2:
