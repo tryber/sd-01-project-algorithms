@@ -1,15 +1,27 @@
 from typing import List
 
 
-# def find_duplicate(nums: List) -> int:
-#     new_list = sorted(nums)
-#     half = len(new_list) // 2
-#     answer = 0
-#     for index in range(half):
+def find_duplicate(nums: List) -> int:
+    nums.sort()
+    h_index = len(nums) - 1
+    lower_index, higher_index = 1, h_index
 
+    while lower_index < higher_index:
+        middle_index = (lower_index + higher_index) // 2
+        less, equal = 0, 0
 
-def funcname(parameter_list):
-    return [i for i in parameter_list if parameter_list[i] > 1]
+        for num in nums:
+            if num < middle_index:
+                less += 1
+            elif num == middle_index:
+                equal += 1
 
+        if equal > 1:
+            return middle_index
 
-print(funcname([1, 3, 4, 2, 2]))
+        if less >= middle_index:
+            higher_index = middle_index - 1
+        else:
+            lower_index = middle_index + 1
+
+    return lower_index

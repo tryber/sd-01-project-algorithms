@@ -1,7 +1,7 @@
 from challenges.challenge_find_the_duplicate import find_duplicate
 
 
-class Test_Anagrams:
+class Test_Duplicate:
     nums = {
         "1º mock": [1, 3, 4, 2, 2],
         "2º mock": [3, 1, 3, 4, 2],
