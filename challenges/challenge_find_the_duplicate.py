@@ -1,6 +1,15 @@
-def find_duplicate(nums):
-    # Faça o código aqui.
+from typing import List
 
 
-nums = []
-print(find_duplicate(nums))
+# def find_duplicate(nums: List) -> int:
+#     new_list = sorted(nums)
+#     half = len(new_list) // 2
+#     answer = 0
+#     for index in range(half):
+
+
+def funcname(parameter_list):
+    return [i for i in parameter_list if parameter_list[i] > 1]
+
+
+print(funcname([1, 3, 4, 2, 2]))
