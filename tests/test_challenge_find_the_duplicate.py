@@ -8,6 +8,7 @@ class Test_Duplicate:
         "3º mock": [1, 1],
         "4º mock": [1, 1, 2],
         "5º mock": [3, 1, 2, 4, 6, 5, 7, 7, 7, 8],
+        "6º mock": [],
     }
 
     def test_when_an_input_has_a_duplicate_element_with_output_2(self):
@@ -33,4 +34,9 @@ class Test_Duplicate:
     def test_when_an_input_has_a_duplicate_element_with_output_7(self):
         given = find_duplicate(self.nums["5º mock"])
         expected = 7
+        assert given == expected
+
+    def test_when_an_input_has_a_duplicate_element_with_output_8(self):
+        given = find_duplicate(self.nums["6º mock"])
+        expected = -1
         assert given == expected
