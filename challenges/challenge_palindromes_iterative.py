@@ -1,6 +1,4 @@
-def is_palindrome_iterative(word):
-    # Faça o código aqui.
-
-
-word = ""
-print(is_palindrome_iterative(word))
+def is_palindrome_iterative(word: str) -> bool:
+    if word == "":
+        return False
+    return word == word[::-1]

@@ -1,8 +1,9 @@
-def study_schedule(start_time, end_time, target_time):
-    # Faça o código aqui.
+from typing import List
 
 
-start_time = []
-end_time = []
-target_time = 0
-print(study_schedule(start_time, end_time, target_time))
+def study_schedule(start_time: List, end_time: List, target_time: int) -> int:
+    answer: int = 0
+    for pos in range(len(start_time)):
+        if start_time[pos] <= target_time <= end_time[pos]:
+            answer += 1
+    return answer
