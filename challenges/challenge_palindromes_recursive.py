@@ -3,11 +3,11 @@ def is_palindrome_recursive(word, low, high):
         return False
 
     if low >= (len(word) // 2):
-        return f"{word} é um palídromo"
+        return True
 
     if word[low] == word[high]:
         return is_palindrome_recursive(word, low + 1, high - 1)
-    return f"{word} não é um palídromo"
+    return False
 
 
 word = "anssnfa"
