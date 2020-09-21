@@ -1,4 +1,4 @@
-def study_schedule(start_time, end_time, target_time):
+def study_schedule(start_time, target_time, end_time):
     if target_time == 0:
         return f"target_time não pode ser {target_time}"
 
@@ -13,4 +13,4 @@ def study_schedule(start_time, end_time, target_time):
 start_time = [3, 2, 4, 2, 5, 5]
 end_time = [3, 3, 3, 5, 5, 5]
 target_time = 2
-print(study_schedule(start_time, end_time, target_time))
+print(study_schedule(start_time, target_time, end_time))
