@@ -10,5 +10,5 @@ def is_palindrome_recursive(word, low, high):
     return False
 
 
-word = ''
+word = 'anaa'
 print(is_palindrome_recursive(word, 0, len(word) - 1))
