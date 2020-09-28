@@ -1,6 +1,8 @@
 def find_duplicate(nums):
-    # Faça o código aqui.
+    for num in nums:
+        if nums.count(num) > 1:
+            return num
 
 
-nums = []
+nums = [1, 2, 3, 3, 4]
 print(find_duplicate(nums))
